@@ -1,0 +1,38 @@
+let habits = [];
+
+function addHabit() {
+    let input = document.getElementById("habitInput");
+    let list = document.getElementById("habitList");
+    let message = document.getElementById("message");
+
+    if (input.value === "") {
+        message.textContent = "Please enter a habit";
+        return;
+    }
+
+    habits.push(input.value);
+
+    list.innerHTML = "";
+    habits.forEach(h => {
+        list.innerHTML += "<li>" + h + "</li>";
+    });
+
+    input.value = "";
+    message.textContent = "";
+}
+
+// Contact form function
+function submitForm() {
+    let name = document.getElementById("name")?.value;
+    let email = document.getElementById("email")?.value;
+    let msg = document.getElementById("messageInput")?.value;
+    let formMsg = document.getElementById("formMessage");
+
+    if(!name || !email || !msg) {
+        formMsg.textContent = "Please fill all fields";
+        return false;
+    }
+
+    formMsg.textContent = "Message sent successfully!";
+    return false; // prevent actual submission
+}

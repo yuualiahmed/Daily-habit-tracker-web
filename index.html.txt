@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Daily Habit Tracker</h1>
+
+    <input type="text" id="habitInput" placeholder="Enter habit">
+    <button onclick="addHabit()">Add Habit</button>
+
+    <p id="message"></p>
+    <ul id="habitList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
